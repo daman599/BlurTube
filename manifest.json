@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "BlurTube",
+    "version": "1.0.0",
+    "description": "BlurTube blurs YouTube's feed so you don't get distracted the moment you open YouTube",
+    "permissions": [],
+    "host_permissions": [
+        "https://youtube.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://youtube.com/"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
