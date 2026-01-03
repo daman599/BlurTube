@@ -5,12 +5,12 @@
     "description": "BlurTube blurs YouTube's feed so you don't get distracted the moment you open YouTube",
     "permissions": [],
     "host_permissions": [
-        "https://youtube.com/"
+        "https://www.youtube.com/*"
     ],
     "content_scripts": [
         {
             "matches": [
-                "https://youtube.com/"
+                "https://www.youtube.com/*"
             ],
             "js": [
                 "content.js"
