@@ -6,5 +6,5 @@
     height: calc(100vh - 56px);
     backdrop-filter: blur(10px);
     z-index: 9999;
-
+    pointer-events: auto;
 }
