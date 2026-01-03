@@ -1,0 +1,10 @@
+#blurtube-overlay {
+    position: fixed;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    height: calc(100vh - 56px);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+
+}
