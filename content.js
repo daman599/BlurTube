@@ -11,6 +11,10 @@
         const overlay = document.createElement("div");
         overlay.id = "blurtube-overlay";
 
+        const text = document.createElement("span");
+        text.innerText = "Be mindful of what you watch."
+
+        overlay.appendChild(text);
         document.body.appendChild(overlay);
     }
 
