@@ -25,6 +25,10 @@
     }
 
     function handleWarning() {
+        const backdrop = document.createElement("div");
+        backdrop.id = "warning-backdrop";
+        document.body.appendChild(backdrop);
+
         const warningBlock = document.createElement("div");
         warningBlock.id = "warning";
 
@@ -36,6 +40,7 @@
 
         document.getElementById("warning-ok").addEventListener("click", () => {
             warningBlock.remove();
+            backdrop.remove();
             timer = null;
         })
     }
@@ -45,7 +50,7 @@
 
         if (timer) { return }
 
-        timer = setTimeout(handleWarning, 5000);
+        timer = setTimeout(handleWarning, 30 * 60 * 1000);
     }
 
     function checkRoute() {
