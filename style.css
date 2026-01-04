@@ -15,7 +15,7 @@
     font-size: 20px;
 }
 
-#warning {
+#reminder {
     position: fixed;
     top: 8px;
     left: 50%;
@@ -37,7 +37,7 @@
     animation: slideDown 0.25s ease-out;
 }
 
-#warning-ok {
+#reminder-button {
     background-color: rgb(115, 112, 112);
     color: white;
     padding: 5px;
@@ -54,7 +54,11 @@
     align-self: flex-end;
 }
 
-#warning-backdrop {
+#reminder-button:hover {
+    background-color: rgb(158, 157, 157);
+}
+
+#reminder-backdrop {
     position: fixed;
     inset: 0;
     z-index: 99999;

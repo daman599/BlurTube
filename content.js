@@ -24,22 +24,22 @@
         document.getElementById("blurtube-overlay")?.remove();
     }
 
-    function handleWarning() {
+    function handleReminder() {
         const backdrop = document.createElement("div");
-        backdrop.id = "warning-backdrop";
+        backdrop.id = "reminder-backdrop";
         document.body.appendChild(backdrop);
 
-        const warningBlock = document.createElement("div");
-        warningBlock.id = "warning";
+        const reminderBlock = document.createElement("div");
+        reminderBlock.id = "reminder";
 
-        warningBlock.innerHTML = `
+        reminderBlock.innerHTML = `
         <span>Be mindful of what you are watching.</span>
-        <button id="warning-ok">Ok</button>
+        <button id="reminder-button">Ok</button>
         `
-        document.body.appendChild(warningBlock);
+        document.body.appendChild(reminderBlock);
 
-        document.getElementById("warning-ok").addEventListener("click", () => {
-            warningBlock.remove();
+        document.getElementById("reminder-button").addEventListener("click", () => {
+            reminderBlock.remove();
             backdrop.remove();
             timer = null;
         })
@@ -50,7 +50,7 @@
 
         if (timer) { return }
 
-        timer = setTimeout(handleWarning, 30 * 60 * 1000);
+        timer = setTimeout(handleReminder, 30 * 60 * 1000);
     }
 
     function checkRoute() {
