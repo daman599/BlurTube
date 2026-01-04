@@ -14,3 +14,38 @@
     color: white;
     font-size: 20px;
 }
+
+#warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(43, 42, 42);
+    color: white;
+    z-index: 100000;
+    font-size: medium;
+}
+
+#warning-ok {
+    background-color: rgb(115, 112, 112);
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    height: 25px;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold;
+}

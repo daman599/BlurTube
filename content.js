@@ -5,6 +5,8 @@
         header.style.zIndex = 10000;
     }
 
+    let timer = null;
+
     function addBlur() {
         if (document.getElementById("blurtube-overlay")) { return }
 
@@ -22,11 +24,35 @@
         document.getElementById("blurtube-overlay")?.remove();
     }
 
+    function handleWarning() {
+        const warningBlock = document.createElement("div");
+        warningBlock.id = "warning";
+
+        warningBlock.innerHTML = `
+        <span>Be mindful of what you are watching.</span>
+        <button id="warning-ok">Ok</button>
+        `
+        document.body.appendChild(warningBlock);
+
+        document.getElementById("warning-ok").addEventListener("click", () => {
+            warningBlock.remove();
+            timer = null;
+        })
+    }
+
+    function handleResults() {
+        removeBlur();
+
+        if (timer) { return }
+
+        timer = setTimeout(handleWarning, 5000);
+    }
+
     function checkRoute() {
         if (location.pathname === "/" || location.pathname.startsWith("/shorts/")) {
             addBlur();
         } else {
-            removeBlur();
+            handleResults();
         }
     }
 
